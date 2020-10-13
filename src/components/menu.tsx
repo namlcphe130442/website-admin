@@ -71,7 +71,9 @@ const Menus = (props:any) => {
                 defaultOpenKeys={['sub1']}
             >
                 {showMenu()}
-                <Button onClick={handleClick}>{statusUser}</Button>
+                <Menu.Item>
+                    <Button onClick={handleClick}>{statusUser}</Button>
+                </Menu.Item>
             </Menu>
             </>
 

@@ -96,9 +96,14 @@ const HomePage = (props: any) => {
         ];
 
         const showStaff = () => {
-            const data = staffSearch === '' ? staffs : staffSearch;
+            var results: any = [];
+            var resultData = staffSearch === '' ? staffs : staffSearch;
+            resultData.forEach((staff: any, index: number) => {
+                staff.key = index;
+                results.push(staff);
+            });            
             return (
-                <Table dataSource={data} columns={columns}/>
+                <Table dataSource={results} columns={columns}/>
             );
         }
 
@@ -136,7 +141,7 @@ const HomePage = (props: any) => {
         }
 
         const onSearchChange = (event: any) => {
-            var resultSearch: any = []
+            var resultSearch: any = [];
             staffs.forEach((staff: Staff) => {
                 if(staff.name.toLocaleLowerCase().indexOf(event.target.value.toLocaleLowerCase()) !== -1){
                     resultSearch.push(staff);

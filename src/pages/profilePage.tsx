@@ -9,13 +9,7 @@ const ProfilePage = () => {
     const { user, isAuthenticated } = useAuth0();
 
     if(isAuthenticated){
-        // const img = new Image();
-        // img.onload = function() {
-        // alert(img.width + 'x' + img.height);
-        // }
-        // img.src = user.picture;
         
-
         return (
             <Row>
                 <Col span={4}>
