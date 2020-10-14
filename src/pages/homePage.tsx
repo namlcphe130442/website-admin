@@ -8,6 +8,7 @@ import Menus from '../components/menu';
 import AddStaffForm from '../components/addStaffForm';
 import * as action from '../actions/index';
 import Login from '../components/login';
+import './home.css';
 
 const HomePage = (props: any) => {
 
@@ -36,7 +37,7 @@ const HomePage = (props: any) => {
         setStaffSearch(staffs);
     }, [staffs])
 
-    if(isAuthenticated){
+    // if(isAuthenticated){
 
         staffs = props.staffs;
 
@@ -108,15 +109,28 @@ const HomePage = (props: any) => {
             },
         ];
 
+        const [idSelect, setIdSelect] = useState(0)
+
         const showStaff = () => {
             var results: any = [];
             var resultData = staffSearch === '' ? staffs : staffSearch;
             resultData.forEach((staff: any, index: number) => {
                 staff.key = index;
                 results.push(staff);
-            });            
+            });    
             return (
-                <Table dataSource={results} columns={columns}/>
+                <Table
+                dataSource={results}
+                columns={columns}
+                onRow={(record) => {
+                    return {
+                        onClick: () => {setIdSelect(record.id)},
+                    };
+                }}
+                rowClassName={(record) => {
+                    return record.id === idSelect ? 'clickRowStyle' : '';
+                }}
+                />
             );
         }
 
@@ -206,12 +220,12 @@ const HomePage = (props: any) => {
                 </Col>
             </Row>
         );
-    }
-    else{
-        return(
-            <Login color={color}/>       
-        );
-    }
+    // }
+    // else{
+    //     return(
+    //         <Login color={color}/>       
+    //     );
+    // }
 }
 
 const mapStateToProps = (state:any) => {

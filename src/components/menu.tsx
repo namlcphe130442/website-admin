@@ -65,7 +65,7 @@ const Menus = (props:any) => {
     }
 
     return (
-            <>
+        <>
             <Menu
                 onClick={handleMenuClick}
                 style={{ width: '100%', height: '100%', borderRight: '2px solid silver'}}
@@ -77,7 +77,7 @@ const Menus = (props:any) => {
                     <Button onClick={handleClick}>{statusUser}</Button>
                 </Menu.Item>
             </Menu>
-            </>
+        </>
 
     );
 }
