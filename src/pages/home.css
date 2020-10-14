@@ -1,3 +1,6 @@
 .clickRowStyle{
-    background-color: #CCFFFF
+    background-color: #CCFFFF;
+}
+.cancelClickRowStyle{
+    background-color: white;
 }
