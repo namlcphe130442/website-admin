@@ -120,16 +120,16 @@ const HomePage = (props: any) => {
             });    
             return (
                 <Table
-                dataSource={results}
-                columns={columns}
-                onRow={(record) => {
-                    return {
-                        onClick: () => {setIdSelect(record.id)},
-                    };
-                }}
-                rowClassName={(record) => {
-                    return record.id === idSelect ? 'clickRowStyle' : '';
-                }}
+                    dataSource={results}
+                    columns={columns}
+                    onRow={(record) => {
+                        return {
+                            onClick: () => {setIdSelect(record.id)},
+                        };
+                    }}
+                    rowClassName={(record) => {
+                        return record.id === idSelect ? 'clickRowStyle' : '';
+                    }}
                 />
             );
         }
