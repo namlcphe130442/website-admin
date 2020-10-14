@@ -17,6 +17,8 @@ const HomePage = (props: any) => {
     const [staffEdit, setStaffEdit] = useState('');
     const [title, setTitle] = useState('');
     const [staffSearch, setStaffSearch] = useState('');
+    const [idSelect, setIdSelect] = useState(0)
+
 
     const dark = {
         background: '#051f38',
@@ -108,8 +110,6 @@ const HomePage = (props: any) => {
                 ),
             },
         ];
-
-        const [idSelect, setIdSelect] = useState(0)
 
         const showStaff = () => {
             var results: any = [];
