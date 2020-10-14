@@ -6,12 +6,13 @@ import { LoginOutlined } from '@ant-design/icons';
 import Menus from "../components/menu";
 
 
-const Login = () => {
+const Login = (props: any) => {
 
     const { loginWithRedirect} = useAuth0();
+    const {color} = props;
     
     return(
-        <Row>
+        <Row style={color}>
             <Col span={4}>
                 <Menus />
             </Col>

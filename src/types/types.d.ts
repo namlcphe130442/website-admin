@@ -4,7 +4,7 @@ type CheckLogin = (value: any) => boolean;
 
 type Colors = {
     theme: string,
-    current: string,
+    current: object,
 }
 
 type Menus = {

@@ -16,6 +16,18 @@ const HomePage = (props: any) => {
     const [staffEdit, setStaffEdit] = useState('');
     const [title, setTitle] = useState('');
     const [staffSearch, setStaffSearch] = useState('');
+
+    const dark = {
+        background: '#051f38',
+        height: '100%'
+    }
+
+    const light = {
+        background: '#F8F8FF',
+        height: '100%'
+    }
+
+    const color = localStorage.getItem('bgColor') === 'dark' ? dark : light;
     
     var staffs: any = null;
 
@@ -152,7 +164,7 @@ const HomePage = (props: any) => {
         }
 
         return (        
-            <Row>
+            <Row style={color}>
                 <Col span={4}>
                     <Menus/>
                 </Col>
@@ -196,7 +208,7 @@ const HomePage = (props: any) => {
     }
     else{
         return(
-            <Login/>       
+            <Login color={color}/>       
         );
     }
 }

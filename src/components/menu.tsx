@@ -31,11 +31,12 @@ const Menus = (props:any) => {
     const history = useHistory();
     const [statusUser, setStatusUser] = useState('');
     const { isAuthenticated } = useAuth0();
+    const theme =  localStorage.getItem('bgColor') === 'dark' ? 'dark' : 'light';
 
     useEffect(() => {
         const status = isAuthenticated === true ? 'Logout' : 'Login';
         setStatusUser(status);
-    }, [isAuthenticated])  
+    }, [isAuthenticated]) 
 
     const showMenu = () => {
         var result = null;
@@ -67,8 +68,9 @@ const Menus = (props:any) => {
             <>
             <Menu
                 onClick={handleMenuClick}
-                style={{ width: '90%'}}
+                style={{ width: '100%', height: '100%'}}
                 defaultOpenKeys={['sub1']}
+                theme={theme}
             >
                 {showMenu()}
                 <Menu.Item>

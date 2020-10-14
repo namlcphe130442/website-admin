@@ -6,12 +6,24 @@ import Menus from "../components/menu";
 import Login from "../components/login";
 
 const ProfilePage = () => {
+
     const { user, isAuthenticated } = useAuth0();
+    const dark = {
+        background: '#051f38',
+        height: '100%'
+    }
+
+    const light = {
+        background: '#F8F8FF',
+        height: '100%'
+    }
+
+    const color = localStorage.getItem('bgColor') === 'dark' ? dark : light;
 
     if(isAuthenticated){
         
         return (
-            <Row>
+            <Row style={color}>
                 <Col span={4}>
                     <Menus/>
                 </Col>
@@ -29,7 +41,7 @@ const ProfilePage = () => {
             </Row>
         );
     }else{
-        return(<Login />);
+        return(<Login color={color}/>);
     }
 };
 
