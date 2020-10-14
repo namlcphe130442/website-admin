@@ -1,0 +1,31 @@
+[
+    {
+        "id":"d63ac584-af34-79761d69-6ead",
+        "name":"Nam LCP",
+        "email":"namlcph@gmail.vn",
+        "salary":"55.512",
+        "dob":"11/12/1999"
+    },
+    {
+        "id":"7281c3c9-0675-d262a964-87d7",
+        "name":"Hoa",
+        "email":"hoahe13as0442@gmail.vn",
+        "salary":"55.512",
+        "dob":"07/06/2000"
+    },
+    {
+        "id":"6cfcb648-db87-012ac7ea-dcba",
+        "name":"Nam LCP - F1 - D1",
+        "email":"namlcphe130442@fpt.edu.vn",
+        "salary":"3000",
+        "dob":"15/03/1999"
+    }
+    ,
+    {
+        "id":"87d0a5e0-5ab4-ce4a3bdc-824f",
+        "name":"Nam LCP - D1",
+        "email":"namlcphe1a30442@gmail.com.vn",
+        "salary":"55.511",
+        "dob":"11/11/2012"
+    }
+]

@@ -124,7 +124,8 @@ const HomePage = (props: any) => {
                     columns={columns}
                     onRow={(record) => {
                         return {
-                            onClick: () => {setIdSelect(idSelect === record.id ? -1 : record.id)},
+                            onClick: () => {setIdSelect(record.id)},
+                            onDoubleClick: () => {setIdSelect(-1)},
                         };
                     }}
                     rowClassName={(record) => {

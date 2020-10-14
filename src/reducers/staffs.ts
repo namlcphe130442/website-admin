@@ -1,10 +1,11 @@
 import * as types from './../constants/actionTypes';
+import JsonData from './../content/myContent.json'
 
 const data :string|null = localStorage.getItem('staffs');
+
 var dataStaffs: Array<Staff> = [];
-if(data){
-    dataStaffs = JSON.parse(data);
-}
+
+dataStaffs = data !== null ? JSON.parse(data) : JsonData;
 
 const  initialState: Array<Staff> = dataStaffs ? dataStaffs : [];
 
