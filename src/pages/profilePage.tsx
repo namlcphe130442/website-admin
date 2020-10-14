@@ -34,7 +34,7 @@ const ProfilePage = () => {
                             <img style={{width: '80%'}} src={user.picture} alt={user.name} />
                         </div>
                         <div>
-                            <h2>{user.name}</h2>
+                            <span>{user.name}</span>
                             <p>Email: {user.email}</p>
                         </div>
                     </div>

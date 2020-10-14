@@ -68,7 +68,7 @@ const Menus = (props:any) => {
             <>
             <Menu
                 onClick={handleMenuClick}
-                style={{ width: '100%', height: '100%'}}
+                style={{ width: '100%', height: '100%', borderRight: '2px solid silver'}}
                 defaultOpenKeys={['sub1']}
                 theme={theme}
             >
