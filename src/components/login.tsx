@@ -18,7 +18,7 @@ const Login = (props: any) => {
             </Col>
             <Col span ={20}>
                 <div style={{textAlign: 'center', marginTop:'10%'}}>
-                    <h4>Please login before using Website</h4>
+                    <span>Please login before using Website</span><br/><br/>
                     <Button
                         type="primary" 
                         icon={<LoginOutlined />} 

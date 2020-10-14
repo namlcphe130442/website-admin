@@ -11,6 +11,7 @@ const SettingPage = () => {
 
     const dark = {
         background: '#051f38',
+        color: '#F8F8FF',
         height: '100%'
     }
 
@@ -42,9 +43,10 @@ const SettingPage = () => {
             <Col span={4}>
                 <Menus />
             </Col>
-            <Col span={20}>
+            <Col span={20} style={{marginTop: '3%', paddingLeft: '3%'}}>
+            <span>Dark Mode:</span>
             <Switch
-                style={{position:"fixed"}}
+                style={{position: "fixed", marginLeft: '3%'}}
                 checked={color.theme === 'light'}
                 onChange={changeTheme}
                 checkedChildren="Light"

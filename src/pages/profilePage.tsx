@@ -10,6 +10,7 @@ const ProfilePage = () => {
     const { user, isAuthenticated } = useAuth0();
     const dark = {
         background: '#051f38',
+        color: '#F8F8FF',
         height: '100%'
     }
 

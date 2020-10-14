@@ -19,6 +19,7 @@ const HomePage = (props: any) => {
 
     const dark = {
         background: '#051f38',
+        color: '#F8F8FF',
         height: '100%'
     }
 
@@ -35,7 +36,7 @@ const HomePage = (props: any) => {
         setStaffSearch(staffs);
     }, [staffs])
 
-    if(isAuthenticated){
+    // if(isAuthenticated){
 
         staffs = props.staffs;
 
@@ -205,12 +206,12 @@ const HomePage = (props: any) => {
                 </Col>
             </Row>
         );
-    }
-    else{
-        return(
-            <Login color={color}/>       
-        );
-    }
+    // }
+    // else{
+    //     return(
+    //         <Login color={color}/>       
+    //     );
+    // }
 }
 
 const mapStateToProps = (state:any) => {
