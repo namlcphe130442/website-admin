@@ -36,7 +36,7 @@ const HomePage = (props: any) => {
         setStaffSearch(staffs);
     }, [staffs])
 
-    // if(isAuthenticated){
+    if(isAuthenticated){
 
         staffs = props.staffs;
 
@@ -206,12 +206,12 @@ const HomePage = (props: any) => {
                 </Col>
             </Row>
         );
-    // }
-    // else{
-    //     return(
-    //         <Login color={color}/>       
-    //     );
-    // }
+    }
+    else{
+        return(
+            <Login color={color}/>       
+        );
+    }
 }
 
 const mapStateToProps = (state:any) => {
