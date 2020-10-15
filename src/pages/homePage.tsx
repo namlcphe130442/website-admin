@@ -8,7 +8,6 @@ import Menus from '../components/menu';
 import AddStaffForm from '../components/addStaffForm';
 import * as action from '../actions/index';
 import Login from '../components/login';
-import './home.css';
 
 const HomePage = (props: any) => {
 
@@ -118,6 +117,7 @@ const HomePage = (props: any) => {
                 staff.key = index;
                 results.push(staff);
             });    
+            let rowStyle = 'clickRowStyle';
             return (
                 <Table
                     dataSource={results}
@@ -129,7 +129,7 @@ const HomePage = (props: any) => {
                         };
                     }}
                     rowClassName={(record) => {
-                        return record.id === idSelect ? 'clickRowStyle' : '';
+                        return record.id === idSelect ? rowStyle : '';
                     }}
                 />
             );
